@@ -51,7 +51,7 @@ namespace WebAsyncTest.Controllers
             Task task1 = Task.Run(() =>
             {
                 for (int i = 0; i <= 1000000; i++) { continue; }
-                asyncthread = (Thread.CurrentThread.ManagedThreadId).ToString();
+                asyncthread = asyncthread + " "  + (Thread.CurrentThread.ManagedThreadId).ToString();
             });
             Task task2 = Task.Run(() =>
             {
